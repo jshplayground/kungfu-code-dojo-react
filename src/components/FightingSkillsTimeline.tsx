@@ -1,5 +1,5 @@
 
-import { Sword, Shield, Zap, Award, Star, Brain, Circle } from "lucide-react";
+import { Sword, Shield, Zap, Award, Star, Brain } from "lucide-react";
 import { motion } from "framer-motion";
 import RadialOrbitalTimeline from "@/components/ui/radial-orbital-timeline";
 
