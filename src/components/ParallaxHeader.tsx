@@ -15,7 +15,7 @@ const ParallaxHeader = () => {
 
   return (
     <div
-      className="flex w-full min-h-[600px] justify-center items-center bg-dark-bg overflow-hidden relative"
+      className="flex w-full min-h-[90vh] justify-center items-center bg-transparent overflow-hidden relative"
       ref={scope}
     >
       <motion.div
@@ -42,7 +42,7 @@ const ParallaxHeader = () => {
       </motion.div>
 
       <Floating sensitivity={1} className="overflow-hidden">
-        <FloatingElement depth={0.5} className="top-[8%] left-[11%]">
+        <FloatingElement depth={0.5} className="top-[5%] left-[11%]">
           <motion.img
             initial={{ opacity: 0 }}
             src="/lovable-uploads/1836d83c-3cb1-4a8f-ae44-419a0d1a0577.png"
@@ -50,7 +50,7 @@ const ParallaxHeader = () => {
             className="w-32 h-32 md:w-48 md:h-48 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl"
           />
         </FloatingElement>
-        <FloatingElement depth={1} className="top-[10%] left-[70%]">
+        <FloatingElement depth={1} className="top-[8%] left-[70%]">
           <motion.img
             initial={{ opacity: 0 }}
             src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3"
@@ -58,7 +58,7 @@ const ParallaxHeader = () => {
             className="w-24 h-24 md:w-36 md:h-36 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl"
           />
         </FloatingElement>
-        <FloatingElement depth={2} className="top-[60%] left-[15%]">
+        <FloatingElement depth={2} className="top-[50%] left-[15%]">
           <motion.img
             initial={{ opacity: 0 }}
             src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
@@ -66,7 +66,7 @@ const ParallaxHeader = () => {
             className="w-28 h-28 md:w-40 md:h-40 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl"
           />
         </FloatingElement>
-        <FloatingElement depth={1} className="top-[50%] left-[75%]">
+        <FloatingElement depth={1} className="top-[45%] left-[75%]">
           <motion.img
             initial={{ opacity: 0 }}
             src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3"
