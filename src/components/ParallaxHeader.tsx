@@ -54,7 +54,7 @@ const ParallaxHeader = () => {
         <FloatingElement depth={2} className="top-[50%] left-[15%]">
           <motion.img initial={{
           opacity: 0
-        }} src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3" alt="Circuitos electrónicos" className="w-28 h-28 md:w-40 md:h-40 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl" />
+        }} alt="Circuitos electrónicos" src="/lovable-uploads/cdfcd4e3-5e7b-4e8a-8a20-6771b9c1d532.png" className="w-40 h-28 md:w-40 md:h-40 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl" />
         </FloatingElement>
         <FloatingElement depth={1} className="top-[45%] left-[75%]">
           <motion.img initial={{
