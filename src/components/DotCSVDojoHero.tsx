@@ -11,10 +11,10 @@ type DotCSVDojoHeroProps = {
 };
 
 export const DotCSVDojoHero: React.FC<DotCSVDojoHeroProps> = ({
-  mainTitle = "¡Desata tu Guerrero IA Interior!",
-  rotatingTexts = ["Derrota Bugs", "Compila Patadas", "Optimiza tu Ki"],
-  subtitle = "El primer dojo que combina Kung Fu y programación para afrontar los desafíos de la IA.",
-  ctaText = "¡Inscríbete Ya!",
+  mainTitle = "Inteligencia Artificial & Kung Fu",
+  rotatingTexts = ["Aprende IA", "Domina el Código", "Entrena tu Mente"],
+  subtitle = "Cursos avanzados de programación e inteligencia artificial con un enfoque práctico y disciplinado.",
+  ctaText = "Explorar Cursos",
   ctaLink = "#enrollment"
 }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -28,13 +28,13 @@ export const DotCSVDojoHero: React.FC<DotCSVDojoHeroProps> = ({
   }, [rotatingTexts.length]);
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden flex flex-col justify-center items-center px-4 py-16">
+    <section className="relative w-full min-h-screen overflow-hidden flex flex-col justify-center items-center px-4 py-16 bg-gradient-to-br from-dark-bg to-subtle-gray">
       <InteractiveDotBackground />
       <div className="container max-w-container relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="lg:w-1/2">
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-light-text mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-light-text mb-4 font-sans"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -62,7 +62,7 @@ export const DotCSVDojoHero: React.FC<DotCSVDojoHeroProps> = ({
 
             <motion.a
               href={ctaLink}
-              className="inline-block bg-kungfu-red hover:bg-kungfu-red-darker text-white font-bold py-3 px-8 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105 shiny-border"
+              className="inline-block bg-kungfu-red hover:bg-kungfu-red-darker text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9 }}
@@ -79,14 +79,13 @@ export const DotCSVDojoHero: React.FC<DotCSVDojoHeroProps> = ({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            <div className="relative w-full h-full aspect-square max-w-lg">
-              <div className="w-full h-full rounded-xl overflow-hidden shiny-border">
-                <div className="w-full h-full bg-subtle-gray flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <div className="text-6xl mb-2">🥋</div>
-                    <p className="text-light-text">Carlos Santana (DotCSV) en posición de combate</p>
-                  </div>
-                </div>
+            <div className="relative w-full max-w-md">
+              <div className="w-full rounded-xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/lovable-uploads/1836d83c-3cb1-4a8f-ae44-419a0d1a0577.png" 
+                  alt="Carlos Santana (DotCSV) en posición de combate" 
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </motion.div>
@@ -123,14 +122,14 @@ const InteractiveDotBackground: React.FC = () => {
   useEffect(() => {
     const generateDots = () => {
       const newDots = [];
-      const numberOfDots = Math.floor(window.innerWidth / 25);
+      const numberOfDots = Math.floor(window.innerWidth / 40);
       
       for (let i = 0; i < numberOfDots; i++) {
         newDots.push({
           x: Math.random() * 100,
           y: Math.random() * 100,
-          size: Math.random() * 8 + 4,
-          color: Math.random() > 0.5 ? 'kungfu-red' : 'tech-neon-green',
+          size: Math.random() * 6 + 2,
+          color: Math.random() > 0.7 ? 'kungfu-red' : 'tech-neon-green',
           delay: Math.random() * 5
         });
       }
@@ -145,7 +144,7 @@ const InteractiveDotBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden opacity-30">
       {dots.map((dot, index) => (
         <motion.div
           key={index}
@@ -157,11 +156,11 @@ const InteractiveDotBackground: React.FC = () => {
             height: `${dot.size}px`,
           }}
           animate={{
-            y: [0, -30, 0],
-            opacity: [0.8, 0.2, 0.8],
+            y: [0, -20, 0],
+            opacity: [0.5, 0.2, 0.5],
           }}
           transition={{
-            duration: 5,
+            duration: 4,
             repeat: Infinity,
             delay: dot.delay,
             ease: "easeInOut",

@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -35,7 +35,7 @@
     --input: 51 51 51;
     --ring: 350 83% 46%;
 
-    --radius: 0.5rem;
+    --radius: 0.4rem;
   }
 
   body {
@@ -43,14 +43,14 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    @apply font-sans font-bold;
   }
 }
 
 @layer components {
   .shiny-border {
     position: relative;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     overflow: hidden;
     z-index: 1;
   }
@@ -66,7 +66,7 @@
     background-size: 400%;
     z-index: -1;
     animation: shine 4s linear infinite;
-    border-radius: 0.6rem;
+    border-radius: 0.5rem;
   }
   
   .dot {
@@ -82,5 +82,14 @@
   
   .kungfu-shadow {
     box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-light-text mb-10 relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply block h-1 w-24 bg-kungfu-red mt-3 mx-auto;
   }
 }

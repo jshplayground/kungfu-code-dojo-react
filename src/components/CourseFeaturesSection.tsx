@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Search, Bug, Cpu, Database, Shield } from "lucide-react";
+import { Code, Database, Search, Brain, Network, Shield } from "lucide-react";
 
 type FeatureItem = {
   id: number;
@@ -17,48 +17,48 @@ type CourseFeaturesProps = {
 };
 
 export const CourseFeaturesSection: React.FC<CourseFeaturesProps> = ({
-  title = "¿Qué Aprenderás en el DotCSV Dojo?",
+  title = "Áreas de Estudio",
   features = [
     {
       id: 1,
       icon: Code,
-      title: "Kung Fu Code",
-      description: "Aprende a codificar como si tus manos fueran armas. Transforma tus algoritmos en movimientos letales de combate virtual.",
+      title: "Programación Avanzada",
+      description: "Domina las técnicas de programación más avanzadas aplicadas a la inteligencia artificial y machine learning.",
       color: "kungfu-red",
     },
     {
       id: 2,
-      icon: Bug,
-      title: "Debug-Fu Avanzado",
-      description: "Técnicas ancestrales para detectar y eliminar bugs con la precisión de un maestro de artes marciales.",
+      icon: Brain,
+      title: "Deep Learning",
+      description: "Comprende y diseña arquitecturas de redes neuronales profundas para resolver problemas complejos.",
       color: "tech-neon-green",
     },
     {
       id: 3,
       icon: Shield,
-      title: "Defensa Contra Negacionistas IA",
-      description: "Protégete de aquellos que niegan el potencial de la IA con argumentos sólidos y movimientos dialécticos certeros.",
+      title: "Ética en IA",
+      description: "Aprende a desarrollar sistemas de IA responsables, justos y seguros que beneficien a la sociedad.",
       color: "kungfu-red",
     },
     {
       id: 4,
-      icon: Cpu,
-      title: "Meditación Neural",
-      description: "Encuentra la paz interior mientras tus modelos de machine learning entrenan. Aumenta tu concentración y reduce la tasa de error.",
+      icon: Network,
+      title: "Procesamiento del Lenguaje Natural",
+      description: "Explora las técnicas más avanzadas para que las máquinas entiendan y procesen el lenguaje humano.",
       color: "tech-neon-green",
     },
     {
       id: 5,
       icon: Database,
-      title: "El Camino del Data",
-      description: "Sigue el sendero de los datos como un verdadero guerrero, desde la limpieza hasta la visualización con elegancia marcial.",
+      title: "Gestión de Datos",
+      description: "Aprende a recopilar, limpiar y preparar datos para entrenar modelos de machine learning efectivos.",
       color: "kungfu-red",
     },
     {
       id: 6,
       icon: Search,
-      title: "Visión de IA Interior",
-      description: "Desbloquea la capacidad de ver patrones ocultos en tus datos como un verdadero maestro Kung Fu de la inteligencia artificial.",
+      title: "Visión Artificial",
+      description: "Desarrolla sistemas que puedan interpretar y comprender información visual como lo hacen los humanos.",
       color: "tech-neon-green",
     },
   ],
@@ -67,7 +67,7 @@ export const CourseFeaturesSection: React.FC<CourseFeaturesProps> = ({
     <section id="features" className="w-full py-24 px-4 bg-dark-bg">
       <div className="container max-w-container mx-auto">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center mb-16 text-light-text"
+          className="section-title text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -94,7 +94,7 @@ const FeatureCard: React.FC<{ feature: FeatureItem; index: number }> = ({
   
   return (
     <motion.div
-      className="relative p-6 rounded-lg bg-subtle-gray hover:bg-opacity-70 transition-all"
+      className="relative p-6 rounded-lg bg-card hover:bg-opacity-70 transition-all border border-border shadow-lg"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

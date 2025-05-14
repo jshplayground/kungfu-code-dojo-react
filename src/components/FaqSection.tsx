@@ -14,40 +14,40 @@ type FaqSectionProps = {
 };
 
 export const FaqSection: React.FC<FaqSectionProps> = ({
-  title = "¿Tienes Dudas Existenciales?",
+  title = "Preguntas Frecuentes",
   faqs = [
     {
       id: 1,
-      question: "¿Necesito ser cinturón negro en Python para unirme?",
-      answer: "¡Para nada! Aceptamos desde cinturones blancos (principiantes) hasta maestros Shaolin del código. Carlos adapta las enseñanzas a tu nivel actual. Lo importante es tu deseo de aprender y tu disposición a fallar muchas, muchas veces antes de compilar correctamente una patada voladora."
+      question: "¿Necesito conocimientos previos para unirme a los cursos?",
+      answer: "Para sacar el máximo provecho de nuestros cursos, recomendamos tener conocimientos básicos de programación. Sin embargo, ofrecemos cursos para todos los niveles, desde principiantes hasta avanzados."
     },
     {
       id: 2,
       question: "¿Las clases son presenciales o virtuales?",
-      answer: "Nuestro dojo existe en el plano astral de internet. Las clases son virtuales, permitiéndote entrenar desde cualquier lugar del mundo. Aunque las patadas no lastiman físicamente, tu ego de programador puede sufrir daños considerables."
+      answer: "Todos nuestros cursos son completamente virtuales, lo que te permite aprender desde cualquier parte del mundo a tu propio ritmo. Contamos con contenido pregrabado de alta calidad y sesiones en vivo para resolver dudas."
     },
     {
       id: 3,
-      question: "¿Cuánto tiempo me tomará dominar el Kung Fu de la IA?",
-      answer: "Según un antiguo proverbio: 'El camino del código marcial no tiene fin'. Pero los alumnos reportan que después de 3 meses ya pueden defenderse de ataques básicos de JavaScript y realizar depuraciones sin consultar Stack Overflow (casi nunca)."
+      question: "¿Cuánto tiempo necesito dedicarle al curso?",
+      answer: "Recomendamos dedicar al menos 5-10 horas semanales para obtener los mejores resultados. La duración total del curso varía según el programa específico, pero suele ser de 3 a 6 meses."
     },
     {
       id: 4,
       question: "¿Qué equipamiento necesito para las clases?",
-      answer: "Un ordenador con conexión a internet, ropa cómoda para ejecutar movimientos de coding-kung-fu, y un espacio donde puedas gritar '¡La IA funciona!' sin alarmar a tus vecinos. Opcional: incienso para meditar mientras tus modelos entrenan."
+      answer: "Necesitarás una computadora con conexión estable a internet. Recomendamos un procesador reciente (i5/Ryzen 5 o superior) y al menos 8GB de RAM para los ejercicios prácticos de machine learning."
     },
     {
       id: 5,
-      question: "¿Carlos realmente sabe kung fu?",
-      answer: "Si por 'kung fu' te refieres a conocimientos profundos sobre IA y una habilidad innata para explicar conceptos complejos con memes... entonces sí, es un verdadero maestro. Para artes marciales físicas, mejor consulta otro dojo. Aunque sus karate-chops al teclado son bastante impresionantes."
+      question: "¿Se obtiene algún certificado al finalizar?",
+      answer: "Sí, al completar satisfactoriamente el curso recibirás un certificado digital que valida tus conocimientos y habilidades adquiridas. Nuestros certificados son reconocidos en la industria."
     }
   ],
 }) => {
   return (
-    <section id="faq" className="w-full py-24 px-4 bg-subtle-gray">
+    <section id="faq" className="w-full py-24 px-4 bg-subtle-gray bg-opacity-50">
       <div className="container max-w-container mx-auto">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center mb-16 text-light-text"
+          className="section-title text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -56,7 +56,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({
           {title}
         </motion.h2>
 
-        <div className="max-w-3xl mx-auto divide-y divide-gray-700">
+        <div className="max-w-3xl mx-auto divide-y divide-gray-700 bg-card rounded-lg shadow-lg p-6">
           {faqs.map((faq, index) => (
             <FaqItem key={faq.id} faq={faq} index={index} />
           ))}
@@ -82,7 +82,7 @@ const FaqItem: React.FC<{ faq: FaqItemData; index: number }> = ({ faq, index }) 
         className="flex justify-between items-center w-full text-left focus:outline-none"
       >
         <span className="text-xl font-medium text-light-text">{faq.question}</span>
-        <span className={`ml-6 flex-shrink-0 text-2xl transition-transform ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
+        <span className={`ml-6 flex-shrink-0 text-2xl transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
           ↓
         </span>
       </button>

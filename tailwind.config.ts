@@ -61,8 +61,8 @@ export default {
 				'subtle-gray': '#333333',
 			},
 			fontFamily: {
-				sans: ['Open Sans', 'sans-serif'],
-				heading: ['Orbitron', 'sans-serif'],
+				sans: ['Montserrat', 'sans-serif'],
+				body: ['Open Sans', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
