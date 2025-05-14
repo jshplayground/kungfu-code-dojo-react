@@ -1,6 +1,6 @@
 
 import React from "react";
-import DotCSVDojoHero from "@/components/DotCSVDojoHero";
+import ParallaxHeader from "@/components/ParallaxHeader";
 import CourseFeaturesSection from "@/components/CourseFeaturesSection";
 import TestimonialsMarquee from "@/components/TestimonialsMarquee";
 import FaqSection from "@/components/FaqSection";
@@ -11,7 +11,7 @@ import SiteFooter from "@/components/SiteFooter";
 const Index = () => {
   return (
     <main className="flex flex-col items-center bg-dark-bg text-light-text overflow-x-hidden">
-      <DotCSVDojoHero />
+      <ParallaxHeader />
       <CourseFeaturesSection />
       <TestimonialsMarquee />
       <FaqSection />
