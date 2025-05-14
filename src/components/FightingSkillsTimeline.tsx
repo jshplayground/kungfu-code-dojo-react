@@ -74,17 +74,17 @@ const timelineData = [
 
 const FightingSkillsTimeline: React.FC = () => {
   return (
-    <section className="w-full pt-40 pb-24 px-4 bg-dark-bg">
+    <section className="w-full pt-40 pb-32 px-4 bg-dark-bg">
       <div className="container max-w-container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-24"
         >
-          <h2 className="section-title">Habilidades de Combate Digital</h2>
-          <p className="text-light-text max-w-3xl mx-auto mt-6 text-lg">
+          <h2 className="section-title text-4xl md:text-5xl font-bold">Habilidades de Combate Digital</h2>
+          <p className="text-light-text max-w-4xl mx-auto mt-8 text-xl leading-relaxed">
             En el Dojo DotCSV, no solo aprenderás a programar – dominarás el arte del combate digital.
             Estas son las habilidades que desarrollarás durante tu entrenamiento, combinando la disciplina
             del kung fu con la precisión de la programación.
