@@ -38,7 +38,7 @@ const testimonials = [
 
 const AnimatedTestimonialsSection = () => {
   return (
-    <section className="w-full py-24 px-4 bg-dark-bg">
+    <section className="w-full py-24 px-4 bg-transparent backdrop-blur-sm">
       <div className="container max-w-container mx-auto">
         <motion.div 
           className="text-center mb-12"
@@ -54,7 +54,7 @@ const AnimatedTestimonialsSection = () => {
         <AnimatedTestimonials 
           testimonials={testimonials} 
           autoplay={true} 
-          className="bg-subtle-gray rounded-xl p-8 shadow-lg border border-muted"
+          className="bg-dark-bg/50 backdrop-blur-md rounded-xl p-8 shadow-lg border border-muted"
         />
       </div>
     </section>

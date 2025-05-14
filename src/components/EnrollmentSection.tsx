@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Calendar, Check } from "lucide-react";
@@ -106,7 +105,7 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
   };
 
   return (
-    <section id="enrollment" className="w-full py-24 px-4 bg-subtle-gray">
+    <section id="enrollment" className="w-full py-24 px-4 bg-transparent backdrop-blur-sm">
       <div className="container max-w-container mx-auto">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-16 text-light-text"
@@ -120,7 +119,7 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div
-            className="bg-dark-bg p-8 rounded-lg"
+            className="bg-dark-bg/50 backdrop-blur-md p-8 rounded-lg border border-gray-800/30"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -193,7 +192,7 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
           </motion.div>
 
           <motion.div
-            className="bg-dark-bg p-8 rounded-lg"
+            className="bg-dark-bg/50 backdrop-blur-md p-8 rounded-lg border border-gray-800/30"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -220,17 +219,17 @@ const EventCard: React.FC<{ event: CalendarEvent }> = ({ event }) => {
   const getBgColor = () => {
     switch (event.type) {
       case "workshop":
-        return "from-tech-neon-green/20 to-tech-neon-green/5";
+        return "from-tech-neon-green/10 to-transparent";
       case "special":
-        return "from-kungfu-red/20 to-kungfu-red/5";
+        return "from-kungfu-red/10 to-transparent";
       default:
-        return "from-gray-700 to-gray-800";
+        return "from-gray-700/20 to-transparent";
     }
   };
 
   return (
     <motion.div 
-      className={`p-4 rounded-lg bg-gradient-to-r ${getBgColor()} border border-gray-700`}
+      className={`p-4 rounded-lg bg-gradient-to-r ${getBgColor()} border border-gray-700/30 backdrop-blur-sm`}
       whileHover={{ y: -2 }}
       transition={{ duration: 0.2 }}
     >

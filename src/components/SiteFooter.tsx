@@ -12,7 +12,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({
   year = new Date().getFullYear(),
 }) => {
   return (
-    <footer className="w-full py-12 px-4 bg-dark-bg border-t border-gray-800">
+    <footer className="w-full py-12 px-4 bg-dark-bg/40 backdrop-blur-md border-t border-gray-800/30 z-10 relative">
       <div className="container max-w-container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>

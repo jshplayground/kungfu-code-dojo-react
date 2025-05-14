@@ -44,7 +44,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({
   ],
 }) => {
   return (
-    <section id="faq" className="w-full py-24 px-4 bg-subtle-gray bg-opacity-50">
+    <section id="faq" className="w-full py-24 px-4 bg-transparent backdrop-blur-sm">
       <div className="container max-w-container mx-auto">
         <motion.h2
           className="section-title text-center"
@@ -56,7 +56,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({
           {title}
         </motion.h2>
 
-        <div className="max-w-3xl mx-auto divide-y divide-gray-700 bg-card rounded-lg shadow-lg p-6">
+        <div className="max-w-3xl mx-auto divide-y divide-gray-700 bg-dark-bg/40 backdrop-blur-md rounded-lg shadow-lg p-6">
           {faqs.map((faq, index) => (
             <FaqItem key={faq.id} faq={faq} index={index} />
           ))}

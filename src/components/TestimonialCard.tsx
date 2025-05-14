@@ -21,13 +21,13 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   href,
 }) => {
   const Content = () => (
-    <div className="flex flex-col p-6 bg-subtle-gray rounded-lg hover:shadow-lg transition-shadow h-full">
+    <div className="flex flex-col p-6 bg-dark-bg/40 backdrop-blur-md rounded-lg hover:shadow-lg transition-shadow h-full border border-gray-800/30">
       <div className="flex-1">
         <p className="text-light-text mb-4 italic">"{text}"</p>
       </div>
 
       <div className="flex items-center mt-4">
-        <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-700 flex items-center justify-center">
+        <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-700/50 flex items-center justify-center">
           {author.avatar ? (
             <img
               src={author.avatar}

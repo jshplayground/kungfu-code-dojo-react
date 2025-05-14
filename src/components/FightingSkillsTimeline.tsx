@@ -74,7 +74,7 @@ const timelineData = [
 
 const FightingSkillsTimeline: React.FC = () => {
   return (
-    <section className="w-full pt-40 pb-32 px-4 bg-dark-bg">
+    <section className="w-full pt-40 pb-32 px-4 bg-transparent backdrop-blur-sm z-10 relative">
       <div className="container max-w-container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

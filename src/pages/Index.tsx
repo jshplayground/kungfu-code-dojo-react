@@ -8,10 +8,12 @@ import FaqSection from "@/components/FaqSection";
 import DojoGallery from "@/components/DojoGallery";
 import EnrollmentSection from "@/components/EnrollmentSection";
 import SiteFooter from "@/components/SiteFooter";
+import BackgroundPaths from "@/components/ui/background-paths";
 
 const Index = () => {
   return (
-    <main className="flex flex-col items-center bg-dark-bg text-light-text overflow-x-hidden">
+    <main className="flex flex-col items-center bg-dark-bg text-light-text overflow-x-hidden relative">
+      <BackgroundPaths />
       <ParallaxHeader />
       <FightingSkillsTimeline />
       <CourseFeaturesSection />

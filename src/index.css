@@ -92,4 +92,26 @@
     content: '';
     @apply block h-1 w-24 bg-kungfu-red mt-3 mx-auto;
   }
+
+  /* New glassmorphism effects */
+  .glass-panel {
+    @apply bg-dark-bg/40 backdrop-blur-md border border-gray-800/30;
+  }
+  
+  .glass-card {
+    @apply bg-dark-bg/30 backdrop-blur-sm border border-gray-800/20 hover:bg-dark-bg/40 transition-colors duration-300;
+  }
+  
+  .tech-glass {
+    @apply bg-dark-bg/30 backdrop-blur-md border border-tech-neon-green/20 shadow-tech-neon-green/10;
+  }
+  
+  .kungfu-glass {
+    @apply bg-dark-bg/30 backdrop-blur-md border border-kungfu-red/20 shadow-kungfu-red/10;
+  }
+}
+
+@keyframes shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
