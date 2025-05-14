@@ -3,7 +3,7 @@ import React from "react";
 import ParallaxHeader from "@/components/ParallaxHeader";
 import FightingSkillsTimeline from "@/components/FightingSkillsTimeline";
 import CourseFeaturesSection from "@/components/CourseFeaturesSection";
-import TestimonialsMarquee from "@/components/TestimonialsMarquee";
+import AnimatedTestimonialsSection from "@/components/AnimatedTestimonialsSection";
 import FaqSection from "@/components/FaqSection";
 import DojoGallery from "@/components/DojoGallery";
 import EnrollmentSection from "@/components/EnrollmentSection";
@@ -15,7 +15,7 @@ const Index = () => {
       <ParallaxHeader />
       <FightingSkillsTimeline />
       <CourseFeaturesSection />
-      <TestimonialsMarquee />
+      <AnimatedTestimonialsSection />
       <FaqSection />
       <DojoGallery />
       <EnrollmentSection />
