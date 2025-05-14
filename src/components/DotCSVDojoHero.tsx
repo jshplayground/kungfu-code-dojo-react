@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -11,10 +10,10 @@ type DotCSVDojoHeroProps = {
 };
 
 export const DotCSVDojoHero: React.FC<DotCSVDojoHeroProps> = ({
-  mainTitle = "Inteligencia Artificial & Kung Fu",
-  rotatingTexts = ["Aprende IA", "Domina el Código", "Entrena tu Mente"],
-  subtitle = "Cursos avanzados de programación e inteligencia artificial con un enfoque práctico y disciplinado.",
-  ctaText = "Explorar Cursos",
+  mainTitle = "Kung Fu Digital contra Negacionistas",
+  rotatingTexts = ["Defiende la Verdad", "Combate Mitos", "Vence Prejuicios"],
+  subtitle = "Aprende técnicas milenarias adaptadas al mundo digital para defender la realidad de la inteligencia artificial frente a sus detractores.",
+  ctaText = "Únete a la Batalla",
   ctaLink = "#enrollment"
 }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);

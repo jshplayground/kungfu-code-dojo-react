@@ -25,11 +25,11 @@ const ParallaxHeader = () => {
         transition={{ duration: 0.88, delay: 0.5 }}
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl z-50 text-light-text font-bold">
-          Inteligencia Artificial
-          <span className="block mt-2 text-tech-neon-green">&amp; Programación</span>
+          Kung Fu Digital
+          <span className="block mt-2 text-tech-neon-green">contra Negacionistas de IA</span>
         </h1>
         <p className="text-lg md:text-xl z-50 text-light-text max-w-2xl">
-          Cursos avanzados de programación e inteligencia artificial con un enfoque práctico y disciplinado.
+          Aprende técnicas milenarias adaptadas al mundo digital para defender la verdad sobre la inteligencia artificial.
         </p>
         <motion.a
           href="#enrollment"
@@ -37,7 +37,7 @@ const ParallaxHeader = () => {
           whileHover={{ y: -5 }}
           whileTap={{ y: 0 }}
         >
-          Explorar Cursos
+          Únete a la Resistencia
         </motion.a>
       </motion.div>
 

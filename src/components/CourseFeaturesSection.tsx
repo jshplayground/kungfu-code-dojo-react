@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Database, Search, Brain, Network, Shield } from "lucide-react";
+import { Code, Database, Search, Brain, Shield, Target } from "lucide-react";
 
 type FeatureItem = {
   id: number;
@@ -17,48 +17,48 @@ type CourseFeaturesProps = {
 };
 
 export const CourseFeaturesSection: React.FC<CourseFeaturesProps> = ({
-  title = "Áreas de Estudio",
+  title = "Áreas de Entrenamiento",
   features = [
     {
       id: 1,
       icon: Code,
-      title: "Programación Avanzada",
-      description: "Domina las técnicas de programación más avanzadas aplicadas a la inteligencia artificial y machine learning.",
+      title: "Fundamentos Técnicos de IA",
+      description: "Comprende los aspectos técnicos de la IA que los negacionistas suelen malinterpretar, preparándote para desmentir mitos con precisión.",
       color: "kungfu-red",
     },
     {
       id: 2,
       icon: Brain,
-      title: "Deep Learning",
-      description: "Comprende y diseña arquitecturas de redes neuronales profundas para resolver problemas complejos.",
+      title: "Psicología del Negacionismo",
+      description: "Analiza los patrones mentales detrás del rechazo a la IA y desarrolla técnicas para abordar las resistencias cognitivas.",
       color: "tech-neon-green",
     },
     {
       id: 3,
       icon: Shield,
-      title: "Ética en IA",
-      description: "Aprende a desarrollar sistemas de IA responsables, justos y seguros que beneficien a la sociedad.",
+      title: "Defensa del Progreso Ético",
+      description: "Aprende a defender los avances en IA mientras reconoces la importancia de la ética y la regulación responsable.",
       color: "kungfu-red",
     },
     {
       id: 4,
-      icon: Network,
-      title: "Procesamiento del Lenguaje Natural",
-      description: "Explora las técnicas más avanzadas para que las máquinas entiendan y procesen el lenguaje humano.",
+      icon: Target,
+      title: "Comunicación Efectiva",
+      description: "Domina técnicas de comunicación que convierten argumentos complejos en explicaciones claras y convincentes para audiencias escépticas.",
       color: "tech-neon-green",
     },
     {
       id: 5,
       icon: Database,
-      title: "Gestión de Datos",
-      description: "Aprende a recopilar, limpiar y preparar datos para entrenar modelos de machine learning efectivos.",
+      title: "Arsenal de Evidencias",
+      description: "Construye un repertorio de casos de éxito, estudios científicos y demostraciones prácticas para respaldar tus argumentos.",
       color: "kungfu-red",
     },
     {
       id: 6,
       icon: Search,
-      title: "Visión Artificial",
-      description: "Desarrolla sistemas que puedan interpretar y comprender información visual como lo hacen los humanos.",
+      title: "Detección de Desinformación",
+      description: "Desarrolla un ojo crítico para identificar noticias falsas y mitos sobre IA que circulan en medios y redes sociales.",
       color: "tech-neon-green",
     },
   ],

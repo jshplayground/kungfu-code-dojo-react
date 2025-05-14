@@ -18,28 +18,28 @@ export const FaqSection: React.FC<FaqSectionProps> = ({
   faqs = [
     {
       id: 1,
-      question: "¿Necesito conocimientos previos para unirme a los cursos?",
-      answer: "Para sacar el máximo provecho de nuestros cursos, recomendamos tener conocimientos básicos de programación. Sin embargo, ofrecemos cursos para todos los niveles, desde principiantes hasta avanzados."
+      question: "¿Necesito conocimientos técnicos para combatir a los negacionistas de la IA?",
+      answer: "No es imprescindible, pero te recomendamos algunos conocimientos básicos sobre IA. Nuestro curso cubre desde conceptos fundamentales hasta técnicas avanzadas de argumentación, adaptándonos a todos los niveles."
     },
     {
       id: 2,
       question: "¿Las clases son presenciales o virtuales?",
-      answer: "Todos nuestros cursos son completamente virtuales, lo que te permite aprender desde cualquier parte del mundo a tu propio ritmo. Contamos con contenido pregrabado de alta calidad y sesiones en vivo para resolver dudas."
+      answer: "Nuestro dojo es completamente digital. Las clases son virtuales para que puedas enfrentarte a los negacionistas desde cualquier lugar del mundo. Combinamos contenido pregrabado con sesiones en vivo para practicar tus técnicas de contraargumentación."
     },
     {
       id: 3,
-      question: "¿Cuánto tiempo necesito dedicarle al curso?",
-      answer: "Recomendamos dedicar al menos 5-10 horas semanales para obtener los mejores resultados. La duración total del curso varía según el programa específico, pero suele ser de 3 a 6 meses."
+      question: "¿Cuánto tiempo necesito para dominar las técnicas anti-negacionistas?",
+      answer: "Recomendamos dedicar 5-10 horas semanales. En 3-6 meses, la mayoría de estudiantes logran vencer al 90% de los argumentos negacionistas que encuentran en redes sociales y conversaciones cotidianas."
     },
     {
       id: 4,
-      question: "¿Qué equipamiento necesito para las clases?",
-      answer: "Necesitarás una computadora con conexión estable a internet. Recomendamos un procesador reciente (i5/Ryzen 5 o superior) y al menos 8GB de RAM para los ejercicios prácticos de machine learning."
+      question: "¿Qué técnicas específicas enseñan para combatir la desinformación sobre IA?",
+      answer: "Enseñamos el método D.A.T.O.S. (Detectar falacias, Analizar fuentes, Técnicas de persuasión, Ofrecer evidencias, Simplificar conceptos complejos) junto con ejercicios prácticos de debate y simulaciones de encuentros con negacionistas."
     },
     {
       id: 5,
-      question: "¿Se obtiene algún certificado al finalizar?",
-      answer: "Sí, al completar satisfactoriamente el curso recibirás un certificado digital que valida tus conocimientos y habilidades adquiridas. Nuestros certificados son reconocidos en la industria."
+      question: "¿El curso me ayudará a convencer a familiares que temen a la IA?",
+      answer: "¡Absolutamente! Una de nuestras especialidades es la técnica 'Puente de Empatía', diseñada específicamente para reconectar con personas cercanas que tienen temores o ideas erróneas sobre la IA, transformando la resistencia en curiosidad."
     }
   ],
 }) => {

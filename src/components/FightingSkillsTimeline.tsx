@@ -6,9 +6,9 @@ import RadialOrbitalTimeline from "@/components/ui/radial-orbital-timeline";
 const timelineData = [
   {
     id: 1,
-    title: "Precisión Técnica",
+    title: "Detección de Falacias",
     date: "Fase 1",
-    content: "Domina la implementación de algoritmos con la precisión de un maestro de kung fu, minimizando errores y maximizando eficiencia.",
+    content: "Aprende a identificar argumentos falaces contra la IA con la precisión de un maestro de kung fu, minimizando las falsas creencias.",
     category: "Técnica",
     icon: Sword,
     relatedIds: [2, 3],
@@ -17,9 +17,9 @@ const timelineData = [
   },
   {
     id: 2,
-    title: "Defensa Resiliente",
+    title: "Escudo de Hechos",
     date: "Fase 1",
-    content: "Aprende técnicas para crear código resistente y sistemas seguros contra vulnerabilidades, como un escudo impenetrable.",
+    content: "Construye un escudo impenetrable de datos verificados y evidencia científica para protegerte contra la desinformación sobre IA.",
     category: "Defensa",
     icon: Shield,
     relatedIds: [1, 4],
@@ -28,9 +28,9 @@ const timelineData = [
   },
   {
     id: 3,
-    title: "Flujo de Energía",
+    title: "Flujo de Contraargumentos",
     date: "Fase 2",
-    content: "Optimiza el flujo de datos y recursos computacionales, canalizando la energía de tus algoritmos como un maestro de chi.",
+    content: "Canaliza la energía de tus conocimientos para formular contraargumentos efectivos y fluidos que desmonten la retórica negacionista.",
     category: "Optimización",
     icon: Zap,
     relatedIds: [1, 5],
@@ -41,7 +41,7 @@ const timelineData = [
     id: 4,
     title: "Mente Estratégica",
     date: "Fase 2",
-    content: "Desarrolla un enfoque estratégico para resolver problemas complejos, anticipando desafíos como un gran estratega de combate.",
+    content: "Desarrolla estrategias para enfrentar a los negacionistas anticipando sus argumentos como un gran estratega de combate.",
     category: "Estrategia",
     icon: Brain,
     relatedIds: [2, 6],
@@ -50,9 +50,9 @@ const timelineData = [
   },
   {
     id: 5,
-    title: "Disciplina y Práctica",
+    title: "Disciplina Pedagógica",
     date: "Fase 3",
-    content: "Cultiva hábitos de aprendizaje continuo y práctica consistente, forjando la disciplina de un verdadero artista marcial del código.",
+    content: "Cultiva la paciencia y disciplina para educar a otros sobre IA, convirtiendo la frustración en oportunidades de enseñanza.",
     category: "Disciplina",
     icon: Award,
     relatedIds: [3, 6],
@@ -61,9 +61,9 @@ const timelineData = [
   },
   {
     id: 6,
-    title: "Maestría Integral",
+    title: "Maestría del Debate",
     date: "Fase 3",
-    content: "Integra todos los aspectos de la programación y la IA, alcanzando un dominio completo como los grandes maestros de kung fu.",
+    content: "Integra todas las habilidades para convertirte en un maestro del debate sobre IA, capaz de enfrentar cualquier argumento negacionista.",
     category: "Maestría",
     icon: Star,
     relatedIds: [4, 5],
@@ -83,11 +83,11 @@ const FightingSkillsTimeline: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-24"
         >
-          <h2 className="section-title text-4xl md:text-5xl font-bold">Habilidades de Combate Digital</h2>
+          <h2 className="section-title text-4xl md:text-5xl font-bold">Habilidades de Combate Anti-Negacionista</h2>
           <p className="text-light-text max-w-4xl mx-auto mt-8 text-xl leading-relaxed">
-            En el Dojo DotCSV, no solo aprenderás a programar – dominarás el arte del combate digital.
+            En el Dojo DotCSV, no solo aprenderás sobre IA – dominarás el arte del combate contra los negacionistas.
             Estas son las habilidades que desarrollarás durante tu entrenamiento, combinando la disciplina
-            del kung fu con la precisión de la programación.
+            del kung fu con la defensa activa de la verdad sobre la inteligencia artificial.
           </p>
         </motion.div>
 

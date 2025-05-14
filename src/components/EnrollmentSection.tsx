@@ -22,7 +22,7 @@ type EnrollmentSectionProps = {
 };
 
 export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
-  title = "¡Únete a la Aventura!",
+  title = "¡Únete a la Resistencia Pro-IA!",
   formTitle = "Registra Tu Interés",
   calendarTitle = "Próximas Sesiones",
   events = [
@@ -32,7 +32,7 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
       dayOfWeek: "Martes",
       dayOfMonth: 20,
       month: "Mayo",
-      title: "Fundamentos de Kung-Fu Python",
+      title: "Fundamentos de Defensa: Mitos y Realidades de la IA",
       time: "19:00 - 21:00",
       type: "class",
     },
@@ -42,7 +42,7 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
       dayOfWeek: "Jueves",
       dayOfMonth: 22,
       month: "Mayo",
-      title: "Patadas Voladoras con JavaScript",
+      title: "Técnica 'Patada de Datos' contra Fake News",
       time: "19:00 - 21:00",
       type: "class",
     },
@@ -52,7 +52,7 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
       dayOfWeek: "Sábado",
       dayOfMonth: 24,
       month: "Mayo",
-      title: "Seminario: El Puño de los Mil Compiladores",
+      title: "Taller: Debate Simulado con Negacionistas",
       time: "11:00 - 14:00",
       type: "workshop",
     },
@@ -62,7 +62,7 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
       dayOfWeek: "Martes",
       dayOfMonth: 27,
       month: "Mayo",
-      title: "Fuerza Interior y Optimización de Código",
+      title: "Comunicación Efectiva para Convencer Escépticos",
       time: "19:00 - 21:00",
       type: "class",
     },
@@ -72,7 +72,7 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
       dayOfWeek: "Sábado",
       dayOfMonth: 31,
       month: "Mayo",
-      title: "Combate: Humanos vs. IA (amistoso)",
+      title: "Gran Torneo de Debate: Defensores vs. Negacionistas",
       time: "17:00 - 19:00",
       type: "special",
     },
@@ -94,8 +94,8 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("¡Solicitud enviada! Prepárate para la aventura.", {
-      description: "Te contactaremos pronto con más información.",
+    toast.success("¡Solicitud enviada! Prepárate para defender la verdad.", {
+      description: "Pronto recibirás instrucciones para tu primer entrenamiento.",
     });
     setFormData({
       name: "",
@@ -162,7 +162,7 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
 
               <div className="mb-8">
                 <label htmlFor="level" className="block text-sm font-medium text-light-text mb-2">
-                  Nivel de Experiencia
+                  Tu Relación con la IA
                 </label>
                 <select
                   id="level"
@@ -172,11 +172,11 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
                   required
                   className="w-full p-3 bg-subtle-gray border border-gray-600 rounded-lg focus:ring-2 focus:ring-tech-neon-green focus:outline-none text-light-text"
                 >
-                  <option value="">Selecciona tu nivel</option>
-                  <option value="beginner">Principiante (Hello World es mi técnica especial)</option>
-                  <option value="intermediate">Intermedio (Ya compilé una patada voladora)</option>
-                  <option value="advanced">Avanzado (Puedo debugear con los ojos cerrados)</option>
-                  <option value="master">Maestro (La IA me tiene miedo)</option>
+                  <option value="">Selecciona tu situación</option>
+                  <option value="beginner">Novato (Me frustra no poder defender la IA)</option>
+                  <option value="intermediate">Iniciado (He ganado algunos debates sencillos)</option>
+                  <option value="advanced">Avanzado (Puedo defender la IA pero aún pierdo algunos debates)</option>
+                  <option value="master">Maestro (Busco perfeccionar mis técnicas de persuasión)</option>
                 </select>
               </div>
 
@@ -186,7 +186,7 @@ export const EnrollmentSection: React.FC<EnrollmentSectionProps> = ({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                ¡Quiero Unirme al Dojo!
+                ¡Quiero Defender la Verdad sobre IA!
               </motion.button>
             </form>
           </motion.div>
