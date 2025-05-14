@@ -2,7 +2,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 function FloatingPaths({ position }: { position: number }) {
     const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -20,7 +19,7 @@ function FloatingPaths({ position }: { position: number }) {
     return (
         <div className="absolute inset-0 pointer-events-none">
             <svg
-                className="w-full h-full text-kungfu-red dark:text-tech-neon-green opacity-10"
+                className="w-full h-full text-kungfu-red"
                 viewBox="0 0 696 316"
                 fill="none"
             >
@@ -31,11 +30,11 @@ function FloatingPaths({ position }: { position: number }) {
                         d={path.d}
                         stroke="currentColor"
                         strokeWidth={path.width}
-                        strokeOpacity={0.05 + path.id * 0.01}
-                        initial={{ pathLength: 0.3, opacity: 0.2 }}
+                        strokeOpacity={0.2 + path.id * 0.01}
+                        initial={{ pathLength: 0.3, opacity: 0.3 }}
                         animate={{
                             pathLength: 1,
-                            opacity: [0.1, 0.2, 0.1],
+                            opacity: [0.2, 0.4, 0.2],
                             pathOffset: [0, 1, 0],
                         }}
                         transition={{
@@ -53,7 +52,7 @@ function FloatingPaths({ position }: { position: number }) {
 export function BackgroundPaths() {
     return (
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 opacity-30">
                 <FloatingPaths position={1} />
                 <FloatingPaths position={-1} />
             </div>
