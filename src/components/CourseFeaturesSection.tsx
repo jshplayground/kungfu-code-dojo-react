@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Code, Database, Search, Brain, Shield, Target } from "lucide-react";
+import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 
 type FeatureItem = {
   id: number;
@@ -63,6 +64,26 @@ export const CourseFeaturesSection: React.FC<CourseFeaturesProps> = ({
     },
   ],
 }) => {
+  // Definir las clases para diferentes tamaños de tarjetas según su posición
+  const getCardClassName = (index: number) => {
+    switch (index) {
+      case 0: // Fundamentos Técnicos
+        return "md:col-span-2 lg:row-span-2";
+      case 1: // Psicología del Negacionismo
+        return "lg:col-span-1";
+      case 2: // Defensa del Progreso Ético
+        return "md:col-span-1";
+      case 3: // Comunicación Efectiva
+        return "md:col-span-1";
+      case 4: // Arsenal de Evidencias
+        return "md:col-span-1 lg:col-span-1";
+      case 5: // Detección de Desinformación
+        return "md:col-span-2 lg:col-span-2";
+      default:
+        return "";
+    }
+  };
+
   return (
     <section id="features" className="w-full py-24 px-4 bg-dark-bg">
       <div className="container max-w-container mx-auto">
@@ -76,47 +97,23 @@ export const CourseFeaturesSection: React.FC<CourseFeaturesProps> = ({
           {title}
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <BentoGrid className="lg:grid-rows-3">
           {features.map((feature, index) => (
-            <FeatureCard key={feature.id} feature={feature} index={index} />
+            <BentoCard
+              key={feature.id}
+              name={feature.title}
+              description={feature.description}
+              Icon={feature.icon}
+              color={feature.color}
+              href="#enrollment"
+              cta="Descubrir más"
+              className={getCardClassName(index)}
+              delay={index * 0.1}
+            />
           ))}
-        </div>
+        </BentoGrid>
       </div>
     </section>
-  );
-};
-
-const FeatureCard: React.FC<{ feature: FeatureItem; index: number }> = ({
-  feature,
-  index,
-}) => {
-  const IconComponent = feature.icon;
-  
-  return (
-    <motion.div
-      className="relative p-6 rounded-lg bg-card hover:bg-opacity-70 transition-all border border-border shadow-lg"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ y: -5, transition: { duration: 0.2 } }}
-    >
-      <div className={`absolute top-0 left-0 w-full h-1 bg-${feature.color}`} />
-      
-      <div className="mb-4 text-center">
-        <div className={`inline-flex justify-center items-center w-14 h-14 rounded-full bg-${feature.color} bg-opacity-20 text-${feature.color}`}>
-          <IconComponent className="w-7 h-7" />
-        </div>
-      </div>
-
-      <h3 className="text-xl font-bold mb-3 text-light-text text-center">
-        {feature.title}
-      </h3>
-      
-      <p className="text-muted-foreground text-center">
-        {feature.description}
-      </p>
-    </motion.div>
   );
 };
 

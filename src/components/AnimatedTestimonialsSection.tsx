@@ -1,8 +1,6 @@
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import PhotoGallery from "./ui/gallery";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import AnimatedTestimonials from "./ui/animated-testimonials";
 
 const testimonials = [
@@ -39,46 +37,25 @@ const testimonials = [
 ];
 
 const AnimatedTestimonialsSection = () => {
-  const [dialogOpen, setDialogOpen] = useState(false);
-
-  // Convert testimonials for PhotoGallery format
-  const galleryPhotos = testimonials.map((testimonial, index) => ({
-    id: index + 1,
-    order: index,
-    x: `${(index - 2) * 160}px`,
-    y: `${15 + (index * 8) % 40}px`,
-    zIndex: 50 - (index * 10),
-    direction: index % 2 === 0 ? "left" as const : "right" as const,
-    src: testimonial.src,
-    alt: testimonial.name
-  }));
-
   return (
-    <section className="w-full py-24 px-4 bg-transparent backdrop-blur-sm relative">
+    <section className="w-full py-24 px-4 bg-transparent backdrop-blur-sm">
       <div className="container max-w-container mx-auto">
-        <PhotoGallery 
-          title="¡Luchadores contra el Negacionismo!"
-          subtitle="HISTORIAS QUE INSPIRAN"
-          buttonText="Ver Todos los Testimonios"
-          photos={galleryPhotos}
-          onClick={() => setDialogOpen(true)}
-          animationDelay={0.2}
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-light-text">¡Luchadores que Han Vencido al Negacionismo!</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">Conoce a quienes han aplicado nuestras técnicas de Kung Fu digital para defender la verdad sobre la inteligencia artificial.</p>
+        </motion.div>
+        
+        <AnimatedTestimonials 
+          testimonials={testimonials} 
+          autoplay={true} 
+          className="bg-dark-bg/50 backdrop-blur-md rounded-xl p-8 shadow-lg border border-muted"
         />
-
-        <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-          <DialogContent className="bg-dark-bg/95 backdrop-blur-md border-gray-800 max-w-4xl">
-            <DialogHeader>
-              <DialogTitle className="text-3xl font-bold text-center text-light-text">Testimonios de Nuestros Luchadores</DialogTitle>
-            </DialogHeader>
-            <div className="p-6">
-              <AnimatedTestimonials 
-                testimonials={testimonials} 
-                autoplay={true} 
-                className="bg-dark-bg/50 backdrop-blur-md rounded-xl p-8 shadow-lg border border-muted"
-              />
-            </div>
-          </DialogContent>
-        </Dialog>
       </div>
     </section>
   );
