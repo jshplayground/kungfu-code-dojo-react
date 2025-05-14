@@ -1,7 +1,7 @@
 
 import React from "react";
 import ParallaxHeader from "@/components/ParallaxHeader";
-import FightingSkillsSection from "@/components/FightingSkillsSection";
+import FightingSkillsTimeline from "@/components/FightingSkillsTimeline";
 import CourseFeaturesSection from "@/components/CourseFeaturesSection";
 import TestimonialsMarquee from "@/components/TestimonialsMarquee";
 import FaqSection from "@/components/FaqSection";
@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <main className="flex flex-col items-center bg-dark-bg text-light-text overflow-x-hidden">
       <ParallaxHeader />
-      <FightingSkillsSection />
+      <FightingSkillsTimeline />
       <CourseFeaturesSection />
       <TestimonialsMarquee />
       <FaqSection />
