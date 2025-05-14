@@ -1,4 +1,3 @@
-
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight, Link, Zap } from "lucide-react";
@@ -155,7 +154,7 @@ export default function RadialOrbitalTimeline({
 
   return (
     <div
-      className="w-full h-[110vh] flex flex-col items-center justify-center bg-dark-bg overflow-hidden"
+      className="w-full h-[110vh] flex flex-col items-center justify-center bg-transparent overflow-hidden"
       ref={containerRef}
       onClick={handleContainerClick}
     >
@@ -204,7 +203,7 @@ export default function RadialOrbitalTimeline({
                 }}
               >
                 <div
-                  className={`absolute rounded-full -inset-1 ${
+                  className={`absolute rounded-full ${
                     isPulsing ? "animate-pulse duration-1000" : ""
                   }`}
                   style={{
@@ -224,7 +223,7 @@ export default function RadialOrbitalTimeline({
                       ? "bg-tech-neon-green text-dark-bg"
                       : isRelated
                       ? "bg-kungfu-red/50 text-white"
-                      : "bg-dark-bg text-white"
+                      : "bg-black/60 text-white backdrop-blur-sm"
                   }
                   border-2 
                   ${
