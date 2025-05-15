@@ -63,29 +63,6 @@ const timelineData = [{
   energy: 15
 }];
 const FightingSkillsTimeline: React.FC = () => {
-  return <section className="w-full pt-40 pb-32 px-4 bg-transparent backdrop-blur-sm z-10 relative">
-      <div className="container max-w-container mx-auto">
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.5
-      }} className="text-center mb-24">
-          <h2 className="section-title text-4xl md:text-5xl font-bold">Habilidades de Combate Anti-Negacionista</h2>
-          <p className="text-light-text max-w-4xl mx-auto mt-8 text-xl leading-relaxed">
-            En el Dojo DotCSV, no solo aprenderás sobre IA – dominarás el arte del combate contra los negacionistas.
-            Estas son las habilidades que desarrollarás durante tu entrenamiento, combinando la disciplina
-            del kung fu con la defensa activa de la verdad sobre la inteligencia artificial.
-          </p>
-        </motion.div>
-
-        <RadialOrbitalTimeline timelineData={timelineData} />
-      </div>
-    </section>;
+  return;
 };
 export default FightingSkillsTimeline;
