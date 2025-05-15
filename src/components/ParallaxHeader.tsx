@@ -54,7 +54,7 @@ const ParallaxHeader = () => {
         <FloatingElement depth={2} className="top-[50%] left-[15%]">
           <motion.img initial={{
           opacity: 0
-        }} alt="Kung fu frente a negacionista con cartel" src="/lovable-uploads/b073ac69-7851-4b6c-becf-fa59eb52cab3.png" className="w-40 h-28 md:w-40 md:h-40 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl" />
+        }} alt="Kung fu frente a negacionista con cartel" className="w-40 h-28 md:w-40 md:h-40 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl" src="/lovable-uploads/cbf2c301-a31e-4244-a9a2-d7750e444d30.png" />
         </FloatingElement>
         <FloatingElement depth={1} className="top-[45%] left-[75%]">
           <motion.img initial={{
