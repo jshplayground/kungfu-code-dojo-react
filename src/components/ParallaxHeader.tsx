@@ -1,10 +1,13 @@
+
 "use client";
 
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "motion/react";
 import Floating, { FloatingElement } from "@/components/ui/parallax-floating";
+
 const ParallaxHeader = () => {
   const [scope, animate] = useAnimate();
+
   useEffect(() => {
     animate("img", {
       opacity: [0, 1]
@@ -13,7 +16,8 @@ const ParallaxHeader = () => {
       delay: stagger(0.15)
     });
   }, []);
-  return <div className="flex w-full min-h-[90vh] justify-center items-center bg-transparent overflow-hidden relative" ref={scope}>
+
+  return <div className="flex w-full min-h-[110vh] justify-center items-center bg-transparent overflow-hidden relative" ref={scope}>
       <motion.div className="z-50 text-center space-y-6 items-center flex flex-col px-4 relative" initial={{
       opacity: 0,
       y: 10
@@ -40,28 +44,48 @@ const ParallaxHeader = () => {
         </motion.a>
       </motion.div>
 
-      <Floating sensitivity={1} className="overflow-hidden">
-        <FloatingElement depth={0.5} className="top-[5%] left-[11%]">
-          <motion.img initial={{
-          opacity: 0
-        }} src="/lovable-uploads/05d89baf-def1-4d29-9021-fac9092518b1.png" alt="Maestro practicando kung fu con muñeco de madera" className="w-32 h-32 md:w-48 md:h-48 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl" />
+      <Floating sensitivity={1.5} className="overflow-hidden">
+        {/* Top left image - increased size and adjusted position */}
+        <FloatingElement depth={0.5} className="top-[2%] left-[8%]">
+          <motion.img 
+            initial={{ opacity: 0 }} 
+            src="/lovable-uploads/05d89baf-def1-4d29-9021-fac9092518b1.png" 
+            alt="Maestro practicando kung fu con muñeco de madera" 
+            className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl shadow-lg" 
+          />
         </FloatingElement>
-        <FloatingElement depth={1} className="top-[8%] left-[70%]">
-          <motion.img initial={{
-          opacity: 0
-        }} alt="Kung Fu Digital contra Negacionistas de la IA" className="w-24 h-24 md:w-36 md:h-36 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl" src="/lovable-uploads/de940f8a-2a8a-4bfc-ab8d-b46debe78590.png" />
+        
+        {/* Top right image - increased size and adjusted position */}
+        <FloatingElement depth={1} className="top-[5%] left-[68%]">
+          <motion.img 
+            initial={{ opacity: 0 }} 
+            alt="Kung Fu Digital contra Negacionistas de la IA" 
+            className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl shadow-lg" 
+            src="/lovable-uploads/de940f8a-2a8a-4bfc-ab8d-b46debe78590.png" 
+          />
         </FloatingElement>
-        <FloatingElement depth={2} className="top-[50%] left-[15%]">
-          <motion.img initial={{
-          opacity: 0
-        }} alt="Kung fu frente a negacionista con cartel" className="w-40 h-28 md:w-40 md:h-40 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl" src="/lovable-uploads/cbf2c301-a31e-4244-a9a2-d7750e444d30.png" />
+        
+        {/* Bottom left image - increased size and adjusted position */}
+        <FloatingElement depth={2} className="top-[60%] left-[12%]">
+          <motion.img 
+            initial={{ opacity: 0 }} 
+            alt="Kung fu frente a negacionista con cartel" 
+            className="w-56 h-48 md:w-72 md:h-60 lg:w-80 lg:h-64 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl shadow-lg" 
+            src="/lovable-uploads/cbf2c301-a31e-4244-a9a2-d7750e444d30.png" 
+          />
         </FloatingElement>
-        <FloatingElement depth={1} className="top-[45%] left-[75%]">
-          <motion.img initial={{
-          opacity: 0
-        }} src="/lovable-uploads/a8431f73-3e53-4e68-a60b-e2f46773c8d7.png" alt="Kung fu contra negacionista con cartel" className="w-32 h-32 md:w-44 md:h-44 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl" />
+        
+        {/* Bottom right image - increased size and adjusted position */}
+        <FloatingElement depth={1} className="top-[55%] left-[70%]">
+          <motion.img 
+            initial={{ opacity: 0 }} 
+            src="/lovable-uploads/a8431f73-3e53-4e68-a60b-e2f46773c8d7.png" 
+            alt="Kung fu contra negacionista con cartel" 
+            className="w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-xl shadow-lg" 
+          />
         </FloatingElement>
       </Floating>
     </div>;
 };
+
 export default ParallaxHeader;
