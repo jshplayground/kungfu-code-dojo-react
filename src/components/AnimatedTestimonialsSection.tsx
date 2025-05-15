@@ -1,6 +1,8 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedTestimonials from "./ui/animated-testimonials";
+
 const testimonials = [{
   quote: "Antes discutía durante horas con negacionistas de la IA sin resultados. Después del entrenamiento en DotCSV Dojo, ahora convenzo a tres ejecutivos por minuto de que la IA no les robará el trabajo.",
   name: "Elon Musk",
@@ -27,7 +29,25 @@ const testimonials = [{
   designation: "Empresario y Político",
   src: "https://images.unsplash.com/photo-1622473590773-f588134b6ce7?q=80&w=1000&auto=format&fit=crop"
 }];
+
 const AnimatedTestimonialsSection = () => {
-  return;
+  return (
+    <section className="py-24 relative overflow-hidden bg-dark-bg/50">
+      <div className="container mx-auto max-w-6xl px-4">
+        <motion.h2 
+          className="text-3xl md:text-4xl font-bold mb-12 text-center text-light-text"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          Lo que dicen nuestros alumnos
+        </motion.h2>
+        
+        <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
+      </div>
+    </section>
+  );
 };
+
 export default AnimatedTestimonialsSection;

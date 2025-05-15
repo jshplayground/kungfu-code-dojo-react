@@ -1,6 +1,8 @@
+
 import { Sword, Shield, Zap, Award, Star, Brain } from "lucide-react";
 import { motion } from "framer-motion";
 import RadialOrbitalTimeline from "@/components/ui/radial-orbital-timeline";
+
 const timelineData = [{
   id: 1,
   title: "Detección de Falacias",
@@ -62,7 +64,27 @@ const timelineData = [{
   status: "pending" as const,
   energy: 15
 }];
+
 const FightingSkillsTimeline: React.FC = () => {
-  return;
+  return (
+    <section className="py-24 relative overflow-hidden">
+      <div className="container mx-auto max-w-6xl px-4">
+        <motion.h2 
+          className="text-3xl md:text-4xl font-bold mb-16 text-center text-light-text"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          Ruta de Aprendizaje del Kung Fu Digital
+        </motion.h2>
+        
+        <div className="h-[600px] md:h-[700px] lg:h-[800px]">
+          <RadialOrbitalTimeline items={timelineData} />
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default FightingSkillsTimeline;

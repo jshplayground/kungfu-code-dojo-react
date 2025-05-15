@@ -1,6 +1,8 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Code, Database, Search, Brain, Shield, Target } from "lucide-react";
+
 type FeatureItem = {
   id: number;
   icon: React.ElementType;
@@ -8,10 +10,12 @@ type FeatureItem = {
   description: string;
   color?: string;
 };
+
 type CourseFeaturesProps = {
   title?: string;
   features?: FeatureItem[];
 };
+
 export const CourseFeaturesSection: React.FC<CourseFeaturesProps> = ({
   title = "Áreas de Entrenamiento",
   features = [{
@@ -52,8 +56,29 @@ export const CourseFeaturesSection: React.FC<CourseFeaturesProps> = ({
     color: "tech-neon-green"
   }]
 }) => {
-  return;
+  return (
+    <section className="py-24 px-4 relative overflow-hidden">
+      <div className="container mx-auto max-w-7xl">
+        <motion.h2 
+          className="text-3xl md:text-4xl font-bold mb-12 text-center text-light-text"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          {title}
+        </motion.h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <FeatureCard key={feature.id} feature={feature} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
+
 const FeatureCard: React.FC<{
   feature: FeatureItem;
   index: number;
@@ -96,4 +121,5 @@ const FeatureCard: React.FC<{
       </p>
     </motion.div>;
 };
+
 export default CourseFeaturesSection;
