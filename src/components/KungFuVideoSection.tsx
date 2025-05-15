@@ -1,7 +1,8 @@
+
 import { ContainerAnimated, ContainerInset, ContainerScroll, ContainerSticky, HeroButton, HeroImage } from "@/components/ui/animated-video-on-scroll";
 const KungFuVideoSection = () => {
   return <section>
-      <ContainerScroll className="h-[200vh]">
+      <ContainerScroll className="h-[150vh]">
         <ContainerSticky style={{
         background: "radial-gradient(40% 40% at 50% 20%, #300912 0%, #220710 22.92%, #1a050d 42.71%, #0c0206 88.54%)"
       }} className="bg-dark-bg px-6 py-8 text-light-text overflow-hidden relative bg-transparent">
