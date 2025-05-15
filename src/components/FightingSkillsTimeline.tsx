@@ -80,7 +80,7 @@ const FightingSkillsTimeline: React.FC = () => {
         </motion.h2>
         
         <div className="h-[600px] md:h-[700px] lg:h-[800px]">
-          <RadialOrbitalTimeline items={timelineData} />
+          <RadialOrbitalTimeline timelineData={timelineData} />
         </div>
       </div>
     </section>
