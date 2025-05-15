@@ -59,7 +59,7 @@ export const ContainerScroll: React.FC<
   const scrollRef = React.useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: scrollRef,
-    offset: ["start center", "end end"],
+    offset: ["start start", "end center"],
   })
 
   return (
@@ -133,7 +133,7 @@ export const HeroVideo = React.forwardRef<
   HTMLMotionProps<"video">
 >(({ style, className, transition, ...props }, ref) => {
   const { scrollYProgress } = useContainerScrollContext()
-  const scale = useTransform(scrollYProgress, [0, 0.8], [0.7, 1])
+  const scale = useTransform(scrollYProgress, [0, 0.4], [0.7, 1])
 
   return (
     <motion.video
@@ -158,7 +158,7 @@ export const HeroImage = React.forwardRef<
   HTMLMotionProps<"img">
 >(({ style, className, transition, ...props }, ref) => {
   const { scrollYProgress } = useContainerScrollContext()
-  const scale = useTransform(scrollYProgress, [0, 0.8], [0.7, 1])
+  const scale = useTransform(scrollYProgress, [0, 0.4], [0.7, 1])
 
   return (
     <motion.img
@@ -205,8 +205,8 @@ export const ContainerInset = React.forwardRef<
     {
       className,
       style,
-      insetYRange = [45, 0],
-      insetXRange = [45, 0],
+      insetYRange = [30, 0],
+      insetXRange = [30, 0],
       roundednessRange = [1000, 16],
       transition,
       ...props

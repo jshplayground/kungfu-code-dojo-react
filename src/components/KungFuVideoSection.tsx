@@ -1,10 +1,12 @@
+
 import { ContainerAnimated, ContainerInset, ContainerScroll, ContainerSticky, HeroButton, HeroImage } from "@/components/ui/animated-video-on-scroll";
+
 const KungFuVideoSection = () => {
   return <section>
-      <ContainerScroll className="h-[250vh]">
+      <ContainerScroll className="h-[170vh]">
         <ContainerSticky style={{
         background: "radial-gradient(40% 40% at 50% 20%, #300912 0%, #220710 22.92%, #1a050d 42.71%, #0c0206 88.54%)"
-      }} className="bg-dark-bg px-6 py-10 text-light-text overflow-hidden relative bg-transparent">
+      }} className="bg-dark-bg px-6 py-6 text-light-text overflow-hidden relative bg-transparent">
           <ContainerAnimated className="space-y-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
               <span className="text-kungfu-red">Kung Fu Digital</span> en acción
@@ -14,7 +16,7 @@ const KungFuVideoSection = () => {
             </p>
           </ContainerAnimated>
 
-          <ContainerInset className="max-h-[450px] w-auto py-6">
+          <ContainerInset className="max-h-[450px] w-auto py-4">
             <HeroImage src="/lovable-uploads/cdfcd4e3-5e7b-4e8a-8a20-6771b9c1d532.png" alt="Maestro de Kung Fu contra negacionistas de la IA" className="w-auto h-auto max-w-[90%] max-h-[450px] mx-auto" />
           </ContainerInset>
           <ContainerAnimated transition={{
@@ -31,4 +33,5 @@ const KungFuVideoSection = () => {
       </ContainerScroll>
     </section>;
 };
+
 export default KungFuVideoSection;
