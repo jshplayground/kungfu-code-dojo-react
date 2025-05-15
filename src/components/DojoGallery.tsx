@@ -1,5 +1,7 @@
+
 import React from "react";
 import { motion } from "framer-motion";
+
 type GalleryItem = {
   id: number;
   type: "image";
@@ -8,10 +10,12 @@ type GalleryItem = {
   caption?: string;
   bgColor?: string;
 };
+
 type DojoGalleryProps = {
   title?: string;
   items?: GalleryItem[];
 };
+
 export const DojoGallery: React.FC<DojoGalleryProps> = ({
   title = "Metodología Anti-Negacionista",
   items = [{
@@ -58,8 +62,20 @@ export const DojoGallery: React.FC<DojoGalleryProps> = ({
     bgColor: "tech-neon-green"
   }]
 }) => {
-  return;
+  return (
+    <section className="w-full py-24 px-4 md:px-8 bg-dark-bg/50">
+      <div className="container mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-light-text">{title}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {items.map((item, index) => (
+            <GalleryImage key={item.id} item={item} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
+
 const GalleryImage: React.FC<{
   item: GalleryItem;
   index: number;
@@ -95,4 +111,5 @@ const GalleryImage: React.FC<{
         </motion.div>}
     </motion.div>;
 };
+
 export default DojoGallery;
