@@ -59,7 +59,7 @@ export const ContainerScroll: React.FC<
   const scrollRef = React.useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: scrollRef,
-    offset: ["start start", "end center"],
+    offset: ["start start", "end start"],
   })
 
   return (
@@ -89,7 +89,7 @@ export const ContainerAnimated = React.forwardRef<
       className,
       transition,
       style,
-      inputRange = [0.2, 0.8],
+      inputRange = [0.1, 0.6],
       outputRange = [80, 0],
       ...props
     },
@@ -133,7 +133,7 @@ export const HeroVideo = React.forwardRef<
   HTMLMotionProps<"video">
 >(({ style, className, transition, ...props }, ref) => {
   const { scrollYProgress } = useContainerScrollContext()
-  const scale = useTransform(scrollYProgress, [0, 0.4], [0.7, 1])
+  const scale = useTransform(scrollYProgress, [0, 0.3], [0.7, 1])
 
   return (
     <motion.video
@@ -158,7 +158,7 @@ export const HeroImage = React.forwardRef<
   HTMLMotionProps<"img">
 >(({ style, className, transition, ...props }, ref) => {
   const { scrollYProgress } = useContainerScrollContext()
-  const scale = useTransform(scrollYProgress, [0, 0.4], [0.7, 1])
+  const scale = useTransform(scrollYProgress, [0, 0.3], [0.7, 1.05])
 
   return (
     <motion.img
@@ -205,8 +205,8 @@ export const ContainerInset = React.forwardRef<
     {
       className,
       style,
-      insetYRange = [30, 0],
-      insetXRange = [30, 0],
+      insetYRange = [25, 0],
+      insetXRange = [25, 0],
       roundednessRange = [1000, 16],
       transition,
       ...props
@@ -215,8 +215,8 @@ export const ContainerInset = React.forwardRef<
   ) => {
     const { scrollYProgress } = useContainerScrollContext()
 
-    const insetY = useTransform(scrollYProgress, [0, 0.8], insetYRange)
-    const insetX = useTransform(scrollYProgress, [0, 0.8], insetXRange)
+    const insetY = useTransform(scrollYProgress, [0, 0.6], insetYRange)
+    const insetX = useTransform(scrollYProgress, [0, 0.6], insetXRange)
     const roundedness = useTransform(scrollYProgress, [0, 1], roundednessRange)
 
     const clipPath = useMotionTemplate`inset(${insetY}% ${insetX}% ${insetY}% ${insetX}% round ${roundedness}px)`
