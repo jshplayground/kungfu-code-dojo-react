@@ -26,7 +26,7 @@ const ParallaxHeader = () => {
     }}>
         <h1 className="text-4xl md:text-6xl lg:text-7xl z-50 text-light-text font-bold">
           Kung Fu Digital
-          <span className="block mt-2 text-tech-neon-green">contra Negacionistas de la IA</span>
+          <span className="block mt-2 text-tech-neon-green font-normal text-6xl">contra Negacionistas de la IA</span>
         </h1>
         <p className="text-lg md:text-xl z-50 text-light-text max-w-2xl">
           Aprende técnicas milenarias adaptadas al mundo digital para defender la verdad sobre la inteligencia artificial.
