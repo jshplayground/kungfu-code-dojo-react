@@ -29,7 +29,7 @@ const ParallaxHeader = () => {
       delay: 0.5
     }}>
         <h1 className="text-4xl md:text-6xl lg:text-7xl z-50 text-light-text font-bold">
-          Kung Fu Digital
+          Clases de Kung Fu
           <span className="block mt-2 text-tech-neon-green font-normal text-6xl">contra Negacionistas de la IA</span>
         </h1>
         <p className="text-lg md:text-xl z-50 text-light-text max-w-2xl">
